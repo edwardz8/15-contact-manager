@@ -9,6 +9,7 @@
 
 .app {
   margin: 0;
+  height: 100vh;
 }
 
 .side-wrapper {
@@ -66,10 +67,15 @@
 }
 .submit {
   border: none;
-  background: #dfde7f;
+  background: #d9a364;
   color: white;
   font-size: 1rem;
-  width: 15rem;
+  width: 100%;
   padding: 5px 10px;
   outline: none;
+
+  &:hover {
+    background: #7ec9b3;
+    color: black;
+  }
 }

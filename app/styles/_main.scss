@@ -23,15 +23,26 @@
 .profile {
     border: .1rem solid lightgrey;
     margin: .5rem;
-    padding: 1rem;
+    padding: 0;
     width: 18rem;
 
 &-top {
+  margin: 0;
+  padding-left: 1rem;
   border-bottom: .1rem solid lightgrey;
 }
 }
 
 .delete {
-  margin: .5rem;
-  text-align: center;
+  width: 100%;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  background: #28496f;
+  color: white;
+
+  &:hover {
+    background: #7ec9b3;
+    color: black;
+  }
 }
