@@ -1,3 +1,12 @@
-export default function reducer (state) {
-return state
+export default function reducer(state, action) {
+  switch (action.type) {
+    // CREATE: Add a new snack
+    case 'CONTACT@CREATE':
+      return { contacts: [action.data, ...state.contacts] };
+    // READ: Loading all snacks
+    case 'CONTACT@FIND_ALL':
+      return { contacts: [...action.data, ...state.contacts] };
+    default:
+      return state || { contacts: []};
+  }
 }
