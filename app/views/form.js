@@ -17,9 +17,11 @@ export default class FormView {
         street: this.el.querySelector('.street-name').value,
         city: this.el.querySelector('.city-name').value,
         state: this.el.querySelector('.state-name').value,
+        //delete: this.el.querySelector('.delete').value,
       };
 
       this.store.dispatch({ type: 'CONTACT@CREATE', data });
+      //this.store.dispatch({ type: 'CONTACT@DELETE', data });
 
     });
   }

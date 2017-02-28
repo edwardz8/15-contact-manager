@@ -47,7 +47,7 @@ export default class ListView {
     this.el.innerHTML = '';
     const contacts = this.store.getState().contacts;
 
-    // Loop through snacks array
+    // Loop through contacts array
     contacts.forEach((contact) => {
       // Create a new item view...
       const view = new ItemView(contact, this.store);
