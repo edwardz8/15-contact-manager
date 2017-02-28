@@ -1,30 +1,20 @@
 
 
-export function findContacts(name, data) {
+export function findContacts(data) {
   return {
     type: 'CONTACT@FIND_ALL',
-    contacts: { name, data, id: new Date() }
+    contacts: {id}
   };
 }
 
-export function createContacts(name, data) {
+export function createContacts(contacts) {
+    contact.id = new Date();
   return {
     type: 'CONTACT@CREATE',
-    contacts: { name, data, id: new Date() }
+    contacts: {data.contacts}
   };
 }
 
 export function removeContacts(id) {
-  return {
-    type: 'CONTACT@REMOVE',
-    id,
-  };
-}
-
-// export function () {
-//  if ( === ) {
-//    return { type: 'SHOW_GRID@TOGGLE' };
-//  }
-//
-//  return { type: 'SHOW_GRID@TOGGLE', force };
-// }
+  return { type: 'CONTACT@REMOVE', id,};
+};
