@@ -23,9 +23,8 @@ module('reducer', () => {
 });
 
 test('remove a contact', (assert) => {
-  const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1 }] }
+  const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1, }] }
   const action = { type: 'CONTACT@REMOVE', id: 1 };
   const expected = { contacts: [] };
-
   assert.deepEqual(reducer(oldState, action), expected);
   });

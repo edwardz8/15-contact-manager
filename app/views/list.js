@@ -1,3 +1,5 @@
+//import {removeContacts} from '../actions';
+
 class ItemView {
   constructor(data, store) {
     this.data = data;
@@ -16,7 +18,11 @@ class ItemView {
       <button class="delete">Delete</button>`;
   }
 
-  mounted() {}
+  mounted() {
+    this.el.addEventListener('click', () => {
+      this.store.dispatch(removeContacts(this.contacts.id));
+    });
+  }
 
   render() {
     this.el.querySelector('.name').innerText = `${this.data.firstName} ${this.data.lastName}`;

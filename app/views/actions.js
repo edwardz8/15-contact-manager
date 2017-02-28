@@ -2,22 +2,22 @@
 
 export function findContacts(name, data) {
   return {
-    type: 'CONTACTS@FIND_ALL',
+    type: 'CONTACT@FIND_ALL',
     contacts: { name, data, id: new Date() }
   };
 }
 
 export function createContacts(name, data) {
   return {
-    type: 'CONTACTS@CREATE',
+    type: 'CONTACT@CREATE',
     contacts: { name, data, id: new Date() }
   };
 }
 
 export function removeContacts(id) {
   return {
-    type: 'CONTACTS@REMOVE',
-    contacts: {}
+    type: 'CONTACT@REMOVE',
+    id,
   };
 }
 
