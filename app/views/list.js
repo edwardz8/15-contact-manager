@@ -1,4 +1,4 @@
-//import {removeContacts} from '../actions';
+import {removeContacts} from '../actions';
 
 class ItemView {
   constructor(data, store) {
@@ -20,7 +20,7 @@ class ItemView {
 
   mounted() {
     this.el.addEventListener('click', () => {
-      this.store.dispatch(removeContacts(this.contacts.id));
+      this.store.dispatch(removeContacts(this.data.id));
     });
   }
 
