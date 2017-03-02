@@ -4,5 +4,5 @@ import store from './store';
 
 const el = document.querySelector('.app');
 
-const controller = new AppController (el, store);
+const controller = new AppController(el, store);
 controller.created()

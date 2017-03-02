@@ -1,3 +1,5 @@
+import {createContacts} from '../actions';
+
 export default class FormView {
 
   constructor(el, store) {
@@ -19,7 +21,7 @@ export default class FormView {
         state: this.el.querySelector('.state-name').value,
       };
 
-      this.store.dispatch({ type: 'CONTACT@CREATE', data });
+      this.store.dispatch(createContacts(data));
       //this.store.dispatch({ type: 'CONTACT@DELETE', data });
 
     });

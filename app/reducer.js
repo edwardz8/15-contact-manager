@@ -5,10 +5,10 @@ export default function reducer(state, action) {
       return { contacts: [action.data, ...state.contacts] };
     // READ: Loading all snacks
     case 'CONTACT@FIND_ALL':
-      return { contacts: [...action.data, ...state.contacts] };
+      return { contacts: action.data };
       // DELETE: Deleting a contact
     case 'CONTACT@REMOVE':
-      return { contacts: [] };
+      return { contacts: state.contacts.filter((x) => x.id !== action.data) };
 
     default:
       return state || { contacts: []};

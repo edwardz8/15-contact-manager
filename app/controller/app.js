@@ -14,7 +14,7 @@ export default class AppController {
     this.store.subscribe(() => {
       // Save the list of snacks as a JSON String in localstorage
       const contacts = this.store.getState().contacts;
-      window.localStorage.snacks = JSON.stringify(contacts);
+      window.localStorage.contacts = JSON.stringify(contacts);
     });
 
     // "mount" (Start up) views
