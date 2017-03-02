@@ -9,20 +9,22 @@
 
 .app {
   margin: 0;
-  height: 100vh;
-}
+  display: flex;
+  }
+
 
 .side-wrapper {
   margin-left: 0;
   padding: 0;
   border: none;
-  position: fixed;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
   background: #28496f;
 }
 
 .heading {
-  padding: 0.5rem;
+  padding: 0;
   text-align: center;
   border-bottom: .2rem solid lightgrey;
   background: #7ec9b3;
@@ -31,8 +33,11 @@
 }
 
 .info {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 1rem;
+    background: #28496f;
 
 &__search {
       display: flex;
@@ -60,12 +65,8 @@
 }
 
 
-.footer {
-  margin: 2rem;
-  padding: 1rem;
-  text-align: center;
-}
 .submit {
+  height: 5rem;
   border: none;
   background: #d9a364;
   color: white;
