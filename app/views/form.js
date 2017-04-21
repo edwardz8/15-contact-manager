@@ -22,7 +22,6 @@ export default class FormView {
       };
 
       this.store.dispatch(createContacts(data));
-      //this.store.dispatch({ type: 'CONTACT@DELETE', data });
 
     });
   }

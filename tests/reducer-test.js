@@ -22,8 +22,9 @@ module('reducer', () => {
  });
 });
 
+
 test('remove a contact', (assert) => {
-  const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1, }, { firstName: 'Ron', lastName: 'Swanson', id: 2, }] };
+  const oldState = { contacts: [] };
   const action = { type: 'CONTACT@REMOVE', id: 1 };
   const expected = { contacts: [] };
   assert.deepEqual(reducer(oldState, action), expected);
@@ -39,7 +40,7 @@ test('remove a contact with two items', (assert) => {
 test('remove a contact when id not in list', (assert) => {
   const oldState = { contacts: [{ firstName: 'Angelina', lastName: 'Jolie', id: 1, }] };
   const action = { type: 'CONTACT@REMOVE', id: '2' };
-  const expected = { contacts: [{ firstName: 'Ron', lastName: 'Swanson', id: 1, }] };
+  const expected = { contacts: [{ firstName: 'Ron', lastName: 'Swanson', id: 2, }] };
 
   assert.deepEqual(reducer(oldState, action), expected);
 });
