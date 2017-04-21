@@ -5,8 +5,8 @@ class ItemView {
     this.data = data;
     this.store = store;
 
-    this.el = document.createElement('li');
-    this.el.classList.add('grid__item');
+    this.el = document.createElement('div');
+    this.el.classList.add('grid-item');
     this.el.innerHTML = `
       <div class="profile">
         <div class="profile-top">
@@ -14,8 +14,9 @@ class ItemView {
           <p class="address"></p>
           <p class="address__line-two"></p>
         </div>
+        <button class="delete">Delete</button>
       </div>
-      <button class="delete">Delete</button>`;
+      `;
   }
 
   mounted() {
